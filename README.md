@@ -97,7 +97,7 @@ Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die k
 
 #### eigene Vagrant VM aufsetzen
 
-![Testfall 1]()
+![Netzwerkplan](https://github.com/sandro832/M300-Services/blob/main/Pictures/Netzwerkplan.PNG)
 
 Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner seiner Wahl das Vagrantfile erstellen für die Konfigurationen der VM. Dies geht mit dem command "vagrant init [VM-Aus-Cloud](https://app.vagrantup.com/ubuntu/boxes/)". Nachdem dieses Config File erstellt ist kann man dieses verändern. Die Config Files sehen je nach VM anders aus. Die wichtigstens änderungen, welche man vornehmen kann ist die IP adresse, die menge an RAM und Cores sowie commands welche beim Einrichten bereits in der Shell ausgeführt werden sollen beim erstellen der VM. Sobald mann alle Konfigurationen vorgenommen hat kann man mit dem Befehl vagrant up die VM erstellen. Wenn dies gemacht wurde, benutzt man den command vagrant ssh um sich mit dieser VM zu verbinden.
 
