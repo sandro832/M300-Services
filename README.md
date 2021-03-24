@@ -1,5 +1,7 @@
 # Dokumentation M300
 
+## Teil 1: Vorbereitung
+
 ### Vortwort
 
 Ich kan offen und ehrlich sagen das ich mich sehr auf das Modul 300 in der TBZ gefreut habe. Den ich habe im Geschäfft mit Git, Docker und Kybernetes zu tun und ausserdem gefähllt mir der Lehrer herr Källin sehr. Das das Modul zum teil im home office stattfinden wird sehe ich als kein grossen Verlust da es das Modul nicht wirklich negativ beinflusst. Das einzige was mir ein wenig sorgen bereitet ist der Ausstausch aber ich bin mir sicher mit Herr Kälin wird das schon gehen. 
@@ -55,27 +57,27 @@ In der Informatik bezeichnet Thread – auch Aktivitätsträger oder leichtgewic
 #### Prozess
 Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die konkrete Instanziierung eines Programms zu dessen Ausführung innerhalb eines Rechnersystems, ergänzt um weitere Informationen und Ressourcenzuteilungen des Betriebssystems für diese Ausführung.
 
-### Git Arbeitschritte
+## Teil 2: Umgebung einrichten
 
-#### 1.1 Account erstellen
+#### Account erstellen
 
 - www.github.com aufrufen und sich dort registrieren
 - Die Email du Verifizierung bestätigen
 
-#### 1.2 Respositorty
+#### Respositorty
 
 - Unter www.github.com einen neuen Repo machen
 - Gescheider Namen und allenfalls beschreibung machen
 - Rpository auf Public stellen
 - Repository erstellen
 
-#### 1.3 SSH Key erstellen
+#### SSH Key erstellen
 
 - Bash Terminal öffnen und folgender command eingeben:   $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
 - Bei der Abfrage, unter welchem Namen der Schlüssel gespeichert werden soll, die Enter-Taste drücken (für Standard):
 - Nun kan ein Passwort festgelet werden. Das muss nanach noch wiederholt werden damit es keine Fehler gibt. 
 
-#### 1.4 SSH-Key hinzufügen
+#### SSH-Key hinzufügen
   
 - Unter www.github.com auf Benutzerkonten
 - Unter SSH und GPG Keys auf "New SSH key klicken
@@ -83,18 +85,18 @@ Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die k
 - Erstellter key einfügen 
 - safe
 
-#### 1.5 Client einrichten
+#### Client einrichten
 
 - CLient unter https://git-scm.com/downloads herunterladen
 - Über Bash mit dem Github account verbinden:  git config --global user.name "<username>" git config --global user.email "<e-mail>"
 
-#### 1.6 M300 Repository einrichten
+#### M300 Repository einrichten
 
 - Im Git Bash folgendes eingeben um Repo zu klonen: git clone https://github.com/mc-b/M300
 - Ins Repo Verzeichnis wechseln
 - Repository aktualisieren
   
-#### 1.7 Repositor vorbereiten
+#### Repositor vorbereiten
 
 - Ordner für Verzeichniss erstellen
 - Repositiory mit ssh oder HTTP klonen
@@ -135,6 +137,7 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 #### Testfall 4
 ![Testfall 4](https://github.com/sandro832/M300-Services/blob/main/Pictures/Fall4.PNG)
 
+
 ### VM Webserver testen 
 
 ![WebserverTesten](https://github.com/sandro832/M300-Services/blob/main/Pictures/Unbenannt.PNG)
@@ -143,7 +146,9 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 
 ![PortForwarding](https://github.com/sandro832/M300-Services/blob/main/Pictures/Permission%20denied.PNG)
 
-### Vagrant File
+## Teil 3: Vagrant File
+
+Hier sind kommandos aufgelistet die im Vagrant konfigurationsfile vorhanden sind.
 
 <mark> sudo ufw --force enable </mark>
 
@@ -233,6 +238,8 @@ Dieser Command startet den Dienst "nginx" neu.
 
 <mark> sudo reboot </mark>
 
+## Teil 4: Arbeitschritte testen
+
 ### Berechtigungen prüfen
 ![Berechtigung](https://github.com/sandro832/M300-Services/blob/main/Pictures/Permission%20denied.PNG)
 
@@ -243,3 +250,15 @@ Dieser Command startet den Dienst "nginx" neu.
 ### Test Firewall
 
 ![UFWTest](https://github.com/sandro832/M300-Services/blob/main/Pictures/test%20ufw.PNG)
+
+## Fazit 
+Vom der LB01 habe ich sicher einiges gelernnt. Ich hatte zwar schon erfahrungen mit den Themen aber das ganze mehr oder weniger über ein Logfile zu konfigurieren habe ich so noch nie gemacht. Auch die integration mit Git fand ich gut da ich so meine Git Kompetenzen gut gebrauchen konnte um anderen zu helfen. Wichtige skills die ich gelernt habe sind volgende:
+
+- Erstellen von Vagrant VMs mit Virtual Box
+- Erstellen von Vagrant VMs mit Boxes
+- Text in Config files schreiben mit Ruby
+- Port forwarding im VagrantFile einrichten
+- Besserer umgang mit GitHub
+- SSH-Key erstellen und einbinden
+- VM Konfigurieren mit hilfe von Vagrant File
+    
