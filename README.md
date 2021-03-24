@@ -137,11 +137,11 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 
 ### VM Webserver testen 
 
-
-
-
+![WebserverTesten](https://github.com/sandro832/M300-Services/blob/main/Pictures/Unbenannt.PNG)
 
 ### Port forwarding
+
+![PortForwarding](https://github.com/sandro832/M300-Services/blob/main/Pictures/Permission%20denied.PNG)
 
 ### Vagrant File
 
@@ -234,7 +234,12 @@ Dieser Command startet den Dienst "nginx" neu.
 <mark> sudo reboot </mark>
 
 ### Berechtigungen prüfen
-
+![Berechtigung](https://github.com/sandro832/M300-Services/blob/main/Pictures/Permission%20denied.PNG)
 
 ### Reverse Proxy prüfen
 
+![ReverseProxy](https://github.com/sandro832/M300-Services/blob/main/Pictures/Reverse%20proxy.PNG)
+
+### Test Firewall
+
+![UFWTest](https://github.com/sandro832/M300-Services/blob/main/Pictures/test%20ufw.PNG)
