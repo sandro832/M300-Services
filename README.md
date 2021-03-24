@@ -25,19 +25,12 @@ Linux ken ich bereits wie meine rechte Hosentasche. Ich hatte bereits im ersten 
 #### Docker/Kybernetes
 Andere Themen die nacher noch dazu kommen sind noch Docker und Kybernetes. Die beiden Themen habe ich auch schon im Geschäfft behandelt und bin vorallem von Kybernetes sehr begeistert. Leider sind sie noch nicht in der LB01 enthalten aber ich nehme an das sie in Zukunft noch einfluss auf das Modul haben werden. 
 
-### Lernschritte
-- Umgang mit Virtual Box 
-- Handling von Vagrant 
-- Visual Studion Code einstellungen
-- SSH keys Github
-- Markdown strukturierung
-  
 ### Git standart Befehle
-![Git Spick](D:\TBZ\Module\Modul_300\Cheatsheet.png)
+![Git Spick](https://github.com/sandro832/M300-Services/blob/main/Pictures/Cheatsheet.png)
 
 ### Vagrant Standard Befehle 
 
- Befehl | Funktion |Cool | Beispiel
+ Befehl | Funktion | Beispiel
 |----------|:-------------:|------:|
 | vagrant init |Im aktuellen Vezeichniss wird Vagrant umgebung, und file inizialisiert | vagrant init D:\TBZ\Module\Modul_300\MeineVagrantVM |
 | vagrant up | Fährt vm mit dem Vagrant config file hoch | vagrant up --virtualbox |
@@ -104,18 +97,7 @@ Ein Prozess ist ein Computerprogramm zur Laufzeit. Genauer ist ein Prozess die k
 
 #### eigene Vagrant VM aufsetzen
 
-+---------------------------------------------------------------+
-! Notebook - Schulnetz 10.x.x.x und Privates Netz 192.168.2.8   !                 
-! Port: 8080 (192.158.1.2:80)                                   !	
-!                                                               !	
-!                    +--------------------+                     !
-!                    ! Web Server         !                     !
-!                    ! Host: web01        !                     !
-!                    ! IP: 10.0.2.15      !                     ! 
-!                    ! Port: 187          !                     !  
-!                    +--------------------+                     !
-!                                                               !	
-+---------------------------------------------------------------+
+![Testfall 1]()
 
 Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner seiner Wahl das Vagrantfile erstellen für die Konfigurationen der VM. Dies geht mit dem command "vagrant init [VM-Aus-Cloud](https://app.vagrantup.com/ubuntu/boxes/)". Nachdem dieses Config File erstellt ist kann man dieses verändern. Die Config Files sehen je nach VM anders aus. Die wichtigstens änderungen, welche man vornehmen kann ist die IP adresse, die menge an RAM und Cores sowie commands welche beim Einrichten bereits in der Shell ausgeführt werden sollen beim erstellen der VM. Sobald mann alle Konfigurationen vorgenommen hat kann man mit dem Befehl vagrant up die VM erstellen. Wenn dies gemacht wurde, benutzt man den command vagrant ssh um sich mit dieser VM zu verbinden.
 
@@ -260,5 +242,6 @@ Vom der LB01 habe ich sicher einiges gelernnt. Ich hatte zwar schon erfahrungen 
 - Port forwarding im VagrantFile einrichten
 - Besserer umgang mit GitHub
 - SSH-Key erstellen und einbinden
-- VM Konfigurieren mit hilfe von Vagrant File
+- VM Konfigurieren mit hilfe von Vagrant Fil
+- Umgang mit Makrdown File
     
