@@ -124,16 +124,16 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 ### Testfälle
 
 #### Testfall 1
-![Testfall 1](D:\TBZ\Module\Modul_300\Testfälle\Fall1.PNG)
+![Testfall 1](https://github.com/sandro832/M300-Services/blob/main/Pictures/Fall1.PNG)
 
 #### Testfall 2
-![Testfall 2](D:\TBZ\Module\Modul_300\Testfälle\Fall2.PNG)
+![Testfall 2](https://github.com/sandro832/M300-Services/blob/main/Pictures/Fall2.PNG)
 
 #### Testfall 3
-![Testfall 3](D:\TBZ\Module\Modul_300\Testfälle\Fall3.PNG)
+![Testfall 3](https://github.com/sandro832/M300-Services/blob/main/Pictures/Fall3.PNG)
 
 #### Testfall 4
-![Testfall 4](D:\TBZ\Module\Modul_300\Testfälle\Fall4.PNG)
+![Testfall 4](https://github.com/sandro832/M300-Services/blob/main/Pictures/Fall4.PNG)
 
 ### VM Webserver testen 
 
