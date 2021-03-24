@@ -145,66 +145,66 @@ Um eine Vagrant VM mit einer Box zu erstellen muss man zuerst in einem Ordner se
 
 ### Vagrant File
 
-<mark> sudo ufw --force enable
+<mark> sudo ufw --force enable </mark>
 
 
 Mit diesem Command wird die ufw Firewall dazu gezwungen sich zu aktivieren auch falls dies von etwas blockiert werden sollte.
 
-<mark> sudo ufw allow 22
+<mark> sudo ufw allow 22 </mark>
 
 
 Mit diesem Command wird der Port 22 auf der Firewall freigegeben.
 
-<mark> sudo ufw allow 2222
+<mark> sudo ufw allow 2222 </mark>
 
 
 Mit diesem Command wird der Port 2222 auf der Firewall freigegeben.
 
-<mark> sudo systemctl start ssh
+<mark> sudo systemctl start ssh </mark>
 
 
 Mit diesem Command wird der Dienst ssh gestartet
 
-<mark>sudo sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+<mark>sudo sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config </mark>
 
 
 Mit diesem Command sucht man im File "/etc/ssh/sshd_config" nach ".PasswordAuthentication." und ersetzt dies durch "PasswordAuthentication yes".
 
     "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort
 
-<mark> sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config
-
+<mark> sudo sed -i "s/.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication yes/g" /etc/ssh/sshd_config </mark>
+ 
 
 Mit diesem Command sucht man im File "/etc/ssh/sshd_config" nach ".ChallengeResponseAuthentication." und ersetzt dies durch "ChallengeResponseAuthentication yes".
 
     "/g" steht für global. Das heisst es ersetzt den Gesuchten Teil überall im genannten File und nicht nur an einem Ort
 
-<mark> sudo chown -c vagrant /var/mail
+<mark> sudo chown -c vagrant /var/mail </mark>
 
 
 Mit diesem Command werden die Rechte für den Ordner /var/mail an de User vagrant gegeben.
 
-<mark> sudo chmod -R 700 /var/mail
+<mark> sudo chmod -R 700 /var/mail </mark>
 
 
 Mit diesem Command setzt man die Rechte auf 700 --> User hat Read/Write/Execute. Group und Global haben keine Berechtigungen.
 
-<mark> sudo apt-get -y install nginx
+<mark> sudo apt-get -y install nginx </mark>
 
 
 Mit diesem Command wird nginx für den Reverse-Proxy installiert.
 
-<mark> sudo unlink /etc/nginx/sites-enabled/default
+<mark> sudo unlink /etc/nginx/sites-enabled/default </mark>
 
 
 Mit diesem Command wird der Virtuelle Host unlinked.
 
-<mark> sudo touch /etc/nginx/sites-available/reverse-proxy.conf
+<mark> sudo touch /etc/nginx/sites-available/reverse-proxy.conf </mark>
 
 
 Mit diesem Command erstellt man das File für die Konfigurationen des Reverse-Proxy.
 
-	<mark> cat <<%EOF% | sudo tee -a /etc/nginx/sites-available/reverse-proxy.conf
+<mark> cat <<%EOF% | sudo tee -a /etc/nginx/sites-available/reverse-proxy.conf
 	server {
 		listen 187;
 		location / {
@@ -216,17 +216,17 @@ Mit diesem Command erstellt man das File für die Konfigurationen des Reverse-Pr
 
 Dieser Abschnitt fügt den Inhalt im File "/etc/nginx/sites-available/reverse-proxy.conf" hinzu. Der Inhalt sagt, dass der Reverse Proxy über Port 187 für den Localhost (127.0.0.1) kommuniziert.
 
-<mark> sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+<mark> sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf </mark>
 
 
 Mit diesem Command erstellt man einen Symlink von "/etc/nginx/sites-available/reverse-proxy.conf" nach "/etc/nginx/sites-enabled/reverse-proxy.conf".
 
-<mark> sudo systemctl stop apache2
+<mark> sudo systemctl stop apache2 </mark>
 
 
 Dieser Command stopt den Dienst "apache2".
 
-<mark> sudo systemctl restart nginx
+<mark> sudo systemctl restart nginx </mark>
 
 
 Dieser Command startet den Dienst "nginx" neu.
